@@ -6,7 +6,7 @@
 /*   By: caidel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 16:18:51 by caidel            #+#    #+#             */
-/*   Updated: 2020/07/15 16:22:48 by caidel           ###   ########.fr       */
+/*   Updated: 2020/07/15 21:01:52 by caidel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ char	*ft_strdup(char *src)
 {
 	char *s;
 
-	s = malloc(sizeof(*s) * ft_strlen(src));
+	if (!(s = (int*)malloc(sizeof(*s) * ft_strlen(src))))
+		return (0);
 	ft_strcpy(s, src);
 	return (s);
 }

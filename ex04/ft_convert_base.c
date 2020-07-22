@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caidel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/15 20:50:13 by caidel            #+#    #+#             */
-/*   Updated: 2020/07/22 19:32:46 by caidel           ###   ########.fr       */
+/*   Created: 2020/07/22 20:21:52 by caidel            #+#    #+#             */
+/*   Updated: 2020/07/22 20:24:00 by caidel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_ultimate_range(int **range, int min, int max)
+char *ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-	int i;
-	int s;
 
-	if (min >= max)
-	{
-		range = NULL;
-		return (0);
-	}
-	s = max - min;
-	if (!(*range = (int*)malloc(s * sizeof(**range))))
-		return (-1);
-	i = 0;
-	while (i < s)
-		range[0][i++] = min++;
-	return (i);
+
+
 }

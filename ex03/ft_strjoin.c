@@ -6,7 +6,7 @@
 /*   By: caidel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:51:06 by caidel            #+#    #+#             */
-/*   Updated: 2020/07/22 20:41:17 by caidel           ###   ########.fr       */
+/*   Updated: 2020/07/23 15:45:43 by caidel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	i -= 1;
 	t += ft_strlen(sep) * i;
-	if (!(scat = (char*)malloc(t + sizeof(*scat))))
+	if (size <= 0)
+		t = 1;
+	if (!(scat = (char*)malloc(t * sizeof(*scat))))
 		return (0);
-	if (!(size))
-		return (scat);
 	scat[0] = '\0';
 	i = 0;
 	while (i < size)
